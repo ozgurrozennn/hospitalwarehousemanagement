@@ -5,4 +5,7 @@ pillow
 plotly
 openpyxl
 xlsxwriter
+python-barcode
+
+
 
