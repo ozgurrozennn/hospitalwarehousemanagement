@@ -14,6 +14,14 @@ from PIL import Image
 import requests
 import io
 
+# Barkod kütüphanesi kontrolü
+try:
+    from barcode import EAN13
+    from barcode.writer import ImageWriter
+    BARCODE_AVAILABLE = True
+except ImportError:
+    BARCODE_AVAILABLE = False
+
 # Sayfa yapılandırması
 st.set_page_config(
     page_title="Hastane Depo Yönetim Sistemi",
@@ -822,10 +830,7 @@ elif st.session_state.current_page == "Assets":
                     else:  # UTC Kod
                         st.markdown("### 📊 UTC Barkod (EAN13)")
 
-                        try:
-                            from barcode import EAN13
-                            from barcode.writer import ImageWriter
-
+                        if BARCODE_AVAILABLE:
                             # UTC kodları grid halinde göster
                             cols_per_row = 3
                             num_to_show = min(st.session_state.barkod_adet, 12)  # Maksimum 12 göster
@@ -853,7 +858,7 @@ elif st.session_state.current_page == "Assets":
                                 st.info(
                                     f"ℹ️ İlk 12 barkod gösterildi. Toplam {st.session_state.barkod_adet} barkod oluşturuldu.")
 
-                        except ImportError:
+                        else:
                             st.error("⚠️ python-barcode kütüphanesi yüklü değil!")
                             st.code("pip install python-barcode", language="bash")
                             st.info(
