@@ -3,6 +3,5 @@ pandas
 plotly
 openpyxl
 xlsxwriter
-barcode
+python-barcode[images]
 pillow
-
