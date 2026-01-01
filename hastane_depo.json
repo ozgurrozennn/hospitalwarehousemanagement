@@ -1,0 +1,32 @@
+{
+    "urunler": {
+        "URN002": {
+            "ad": "Serum Seti",
+            "barkod_tipi": "UTC",
+            "barkod_no": "7449338231917"
+        },
+        "URN003": {
+            "ad": "Serum Seti",
+            "barkod_tipi": "QR",
+            "barkod_no": "426667420933",
+            "lot_no": "12345"
+        }
+    },
+    "depolar": {
+        "DEP003": {
+            "ad": "Acil Servis",
+            "urunler": {
+                "URN002": {
+                    "miktar": 0,
+                    "kritik_seviye": 50,
+                    "min_seviye": 100,
+                    "max_seviye": 1000
+                }
+            }
+        },
+        "DEP004": {
+            "ad": "Yoğun bakım",
+            "urunler": {}
+        }
+    }
+}

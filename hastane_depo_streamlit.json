@@ -1,0 +1,181 @@
+{
+  "urunler": {
+    "URN001": {
+      "ad": "Enjektör 5 cc",
+      "barkod_tipi": "QR Kod",
+      "barkod_no": "340322065705",
+      "lot_no": "lot 2025",
+      "lot_adet": 100,
+      "depo_id": "DEP001"
+    },
+    "URN002": {
+      "ad": "Enjektör 5 cc",
+      "barkod_tipi": "QR Kod",
+      "barkod_no": "192327854965",
+      "lot_no": "lot 2025",
+      "lot_adet": 100,
+      "depo_id": "DEP001"
+    },
+    "URN003": {
+      "ad": "Enjektör 5 cc",
+      "barkod_tipi": "UTC Kod",
+      "barkod_no": "552996802890",
+      "lot_no": "lot 2025",
+      "lot_adet": 100,
+      "depo_id": "DEP001"
+    },
+    "URN004": {
+      "ad": "Enjektör 2 cc",
+      "barkod_tipi": "UTC Kod",
+      "barkod_no": "550141994965",
+      "lot_no": "lot2025a",
+      "lot_adet": 100,
+      "depo_id": "DEP001"
+    },
+    "URN005": {
+      "ad": "Enjektör 2 cc",
+      "barkod_tipi": "UTC Kod",
+      "barkod_no": "715493356373",
+      "lot_no": "lot2025a",
+      "lot_adet": 100,
+      "depo_id": "DEP001"
+    },
+    "URN006": {
+      "ad": "enjektör 2cc",
+      "barkod_tipi": "QR Kod",
+      "barkod_no": "202112121730",
+      "lot_no": "LOT20251231",
+      "lot_adet": 100,
+      "depo_id": "DEP002",
+      "fatura_no": "f-2024",
+      "birim_fiyat": 20.0,
+      "doviz": "TRY"
+    }
+  },
+  "depolar": {
+    "DEP001": {
+      "ad": "Acil Servis",
+      "urunler": {
+        "URN001": {
+          "miktar": 0,
+          "kritik_seviye": 100,
+          "min_seviye": 50,
+          "max_seviye": 1000
+        },
+        "URN002": {
+          "miktar": 0,
+          "kritik_seviye": 100,
+          "min_seviye": 50,
+          "max_seviye": 1000
+        },
+        "URN003": {
+          "miktar": 0,
+          "kritik_seviye": 100,
+          "min_seviye": 50,
+          "max_seviye": 1000
+        },
+        "URN004": {
+          "miktar": 0,
+          "kritik_seviye": 100,
+          "min_seviye": 50,
+          "max_seviye": 1000
+        },
+        "URN005": {
+          "miktar": 0,
+          "kritik_seviye": 100,
+          "min_seviye": 50,
+          "max_seviye": 1000
+        }
+      }
+    },
+    "DEP002": {
+      "ad": "Merkez Depo",
+      "urunler": {
+        "URN006": {
+          "miktar": 100,
+          "kritik_seviye": 10,
+          "min_seviye": 20,
+          "max_seviye": 200
+        }
+      }
+    },
+    "DEP003": {
+      "ad": "Yogun bakım",
+      "urunler": {}
+    },
+    "DEP004": {
+      "ad": "Radyoloji",
+      "urunler": {}
+    }
+  },
+  "entegrasyonlar": {
+    "sistem": [
+      {
+        "name": "Hastane Bilgi Sistemi Entegrasyonu",
+        "description": "Hastane bilgi sistemi ile veri senkronizasyonu",
+        "enabled": true
+      },
+      {
+        "name": "E-Fatura Entegrasyonu",
+        "description": "Elektronik fatura sistemine otomatik aktarım",
+        "enabled": false
+      },
+      {
+        "name": "Barkod Yazıcı Entegrasyonu",
+        "description": "Doğrudan barkod yazıcıya gönderim",
+        "enabled": true
+      },
+      {
+        "name": "SMS Bildirimleri",
+        "description": "Kritik stok seviyeleri için SMS uyarıları",
+        "enabled": false
+      }
+    ],
+    "harici": [
+      {
+        "name": "Microsoft Office Online",
+        "description": "Raporları Office Online ile görüntüleme ve düzenleme",
+        "enabled": true
+      },
+      {
+        "name": "Google Drive Yedekleme",
+        "description": "Otomatik Google Drive yedekleme",
+        "enabled": false
+      },
+      {
+        "name": "Dropbox Senkronizasyonu",
+        "description": "Dropbox ile dosya senkronizasyonu",
+        "enabled": false
+      }
+    ]
+  },
+  "faturalar": [
+    {
+      "id": 1,
+      "belge_tipi": "Fatura",
+      "fatura_no": "f-2024",
+      "fatura_tarihi": "2025-12-31",
+      "tedarikci": "medmedikal",
+      "kalemler": [
+        {
+          "malzeme_adi": "enjektör 2cc",
+          "lot_no": "LOT20251231",
+          "miktar": 100,
+          "doviz": "TRY",
+          "birim_fiyat": 20.0,
+          "ara_toplam": 2000.0,
+          "kdv_oran": 20,
+          "kdv_tutari": 400.0,
+          "toplam": 2400.0,
+          "kur": 1,
+          "ara_toplam_try": 2000.0,
+          "kdv_tutari_try": 400.0,
+          "toplam_try": 2400.0
+        }
+      ],
+      "toplam_kalem": 1,
+      "genel_toplam_try": 2400.0,
+      "kayit_tarihi": "2025-12-31 11:23:00"
+    }
+  ]
+}
